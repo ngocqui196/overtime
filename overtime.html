@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Enter a number:</p>
+<input id="hh" type="number">
+<button id="head" onclick="mac()">Show</button>
+<script>
+    function mac() {
+        let a = document.getElementById("hh").value;
+        let sum = 0;
+        let i;
+        for (i = 1; i <= a; i ++) {
+            (sum += i);
+        }
+        alert(sum);
+    }
+
+</script>
+<script>
+   let number = prompt("Nhập số của bạn vào đây:");
+   let sum =0;
+   for (let i = 1; i <= number; i ++) {
+       if (i %2 ==1) {
+           sum += i
+       }
+   } document.write(sum)
+</script>
+
+<!--<p>Thằng bạn cho bài làm thêm tính các phần tử lẻ trong mảng</p>-->
+<script>
+    let arr = [7, 9, 12, 1];
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] %2 == 1) {
+            sum += arr[i]
+        }
+    }
+    document.write(sum);
+</script>
+</body>
+</html>
