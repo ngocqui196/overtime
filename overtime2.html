@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<p>Enter a number:</p>
+<input id="cc" type="number">
+<button onclick="ladyranger()">Show</button>
+<script>
+    function ladyranger() {
+       let str = document.getElementById("cc").value;
+       let sum = [];
+       for (let i = 0; i <= str; i++) {
+           if (i >= 2) {
+               if (i==2){
+                   // là số nguyên tố
+                   sum.push(i)
+               }else{
+                   let laSoNT = true; // true là số nguyên tố, false không phải số nguyên tố
+
+                   //Bắt đầu kiểm tra tính nguyên tố
+                   let p50 = i/2;
+                   for (let j = 2; j <= p50; j++){
+                       if (i%j === 0) {
+                           // không phải số nguyên tố
+                           laSoNT = false;
+                           break;
+                       }
+                   }
+                   // kết thúc kiểm tra số nguyên tố
+
+                   if (laSoNT === true) {
+                       sum.push(i)
+                   }else{
+
+                   }
+               }
+           }
+       }
+       document.write(sum.join());
+    }
+</script>
+</body>
+</html>
