@@ -5,11 +5,17 @@
     <title>Bài 2</title>
 </head>
 <body>
-<p>Enter a number:</p>
-<input id="cc" type="number">
-<button onclick="ladyranger()">Show</button>
-<script>
-    function ladyranger() {
+<p>Hiển thị các số nguyên tố trong dãy:</p>
+<input id="cc" type="number"><br>
+<button onclick="ladyRanger()">Show</button><br>
+<div id="display"></div>
+
+<p>Tổng của các số lẻ:</p>
+<input id="qq" type="number"><br>
+<button onclick="brother()">Yep</button>
+<div id="result"></div>
+<script language="javascript" type="text/javascript">
+    function ladyRanger() {
        let str = document.getElementById("cc").value;
        let sum = [];
        for (let i = 0; i <= str; i++) {
@@ -33,8 +39,33 @@
                }
            }
        }
-       document.write(sum.join());
+       document.getElementById("display").innerHTML = sum;
     }
+    function brother() {
+        let som = document.getElementById("qq").value;
+        let total = 0;
+        for (let i = 0; i <= som; i++) {
+            if (i % 2 !== 0) {
+                total += i;
+            }
+        }
+        document.getElementById("result").innerHTML = total;
+    }
+
+        let now = new Date().getFullYear();
+        let birthyear = prompt("Nhập ngày sinh của bạn theo MM/DD/YYYY" );
+        let age = new Date(birthyear).getFullYear();
+        if (now > age) {
+            alert("Tuổi của bạn là:" + (now - age));
+        }else {
+            alert("Tuổi của bạn không hợp lệ.")
+        }
+
+
+
+
+
+
 </script>
 </body>
 </html>
